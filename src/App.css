@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #FFFBEB;
+  
+}
+/* Mobile screen par pure page & sections ko White (#FFFFFF) karne ke liye */
+@media (max-width: 768px) {
+  /* Body aur Root Containers */
+  html, 
+  body, 
+  #root, 
+  main, 
+  section, 
+  div {
+    background-color: #ffffff;
+  }
+
+  /* Specific Components jinka color override karna hai */
+  .navbar,
+  .navbar-header,
+  .navbar__right,
+  .grow-wrapper,
+  .grow-section,
+  .grow-top-content {
+    background-color: #ffffff !important;
+  }
+} 

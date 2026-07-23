@@ -1,0 +1,333 @@
+/* ==========================================
+   ARTICLES & EVENTS — Scoped CSS
+   ========================================== */
+
+.aes-wrapper {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-color: #FFFBEB; /* Light Cream BG */
+}
+
+/* Container */
+.aes-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Header */
+.aes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.aes-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.aes-link {
+  color: #78350F;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.aes-link:hover { opacity: 0.7; }
+
+/* Grid Layout */
+.aes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Articles Section */
+.aes-articles {
+  padding: 72px 0 40px;
+}
+
+.aes-card {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aes-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.aes-card-img {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.aes-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aes-card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.aes-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.aes-card-text {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ==========================================
+   EVENTS SECTION WITH INTEGRATED WAVE
+   ========================================== */
+
+.aes-events-section {
+  position: relative;
+  padding: 40px 0 0;
+}
+
+.aes-event-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.aes-event-top {
+  padding: 14px 16px 0;
+}
+
+.aes-category {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94A3B8;
+  display: block;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.aes-event-card .aes-card-img {
+  height: 160px;
+  margin: 10px 0 0;
+}
+
+/* 🟢 SVG WAVE BACKGROUND (Guarantees Wave Shape) */
+.aes-wave-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.aes-wave-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================
+   DARK FOOTER AREA
+   ========================================== */
+
+.aes-dark {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 5;
+  margin-top: -1px; /* Gap-killer line */
+}
+
+.aes-banner {
+  padding: 40px 0 48px;
+  border-bottom: 1px solid #1E293B;
+}
+
+.aes-banner-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  align-items: center;
+}
+
+.aes-banner-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.aes-signup-btn {
+  background: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.aes-signup-btn:hover {
+  background: #FFFFFF;
+  color: #0F172A;
+}
+
+.aes-footer {
+  padding: 48px 0 32px;
+}
+
+.aes-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.aes-footer-col h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 14px;
+}
+
+.aes-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aes-footer-col ul li { margin-bottom: 9px; }
+
+.aes-footer-col ul li a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.aes-footer-col ul li a:hover { color: #FFFFFF; }
+
+.aes-store-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.aes-store-btns img {
+  height: 34px;
+  width: auto;
+}
+
+.aes-follow-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+}
+
+.aes-social {
+  display: flex;
+  gap: 12px;
+}
+
+.aes-social a {
+  color: #94A3B8;
+  font-size: 17px;
+}
+
+.aes-social a:hover { color: #FFFFFF; }
+
+.aes-divider {
+  border: none;
+  border-top: 1px solid #1E293B;
+  margin: 0 0 20px;
+}
+
+.aes-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.aes-footer-bottom p { margin: 0; }
+
+.aes-bottom-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.aes-bottom-links a {
+  color: #64748B;
+  text-decoration: none;
+}
+
+.aes-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .aes-inner { padding: 0 40px; }
+  .aes-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .aes-footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .aes-title, .aes-banner-title { font-size: 26px; }
+}
+
+@media (max-width: 600px) {
+  .aes-inner { padding: 0 20px; }
+  .aes-articles { padding: 48px 0 24px; }
+  .aes-events-section { padding: 20px 0 0; }
+  .aes-grid { grid-template-columns: 1fr; gap: 16px; }
+  .aes-title, .aes-banner-title { font-size: 22px; }
+  .aes-header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 20px; }
+  .aes-banner-inner { flex-direction: column; align-items: flex-start; gap: 16px;align-items: center; }
+  .aes-signup-btn { text-align: center;justify-content: center; align-items: center;}
+  .aes-footer-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .aes-footer-bottom { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .aes-bottom-links { flex-wrap: wrap; gap: 10px; }
+}

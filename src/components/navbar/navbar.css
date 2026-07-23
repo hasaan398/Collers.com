@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap');
+
+
+/* =====================
+   NAVBAR (PIXEL PERFECT FIGMA MATCH)
+   ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #FFFBEB;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+}
+
+/* ---- Logo ---- */
+.navbar__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* ---- Right side: links + auth together ---- */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* ---- Nav Links ---- */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2vw, 32px);
+  list-style: none;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #78350F;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.navbar__links a:hover {
+  opacity: 0.7;
+}
+
+/* ---- Auth Buttons ---- */
+.navbar__auth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.navbar__login {
+  text-decoration: none;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #78350F;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.navbar__login:hover {
+  opacity: 0.7;
+}
+
+.navbar__signup {
+  text-decoration: none;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #78350F;
+  border: 2px solid #78350F;
+  border-radius: 8px;
+  padding: 12px 24px;
+  white-space: nowrap;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar__signup:hover {
+  background-color: #78350F;
+  color: #FFFBEB;
+}
+
+/* ---- Hamburger (mobile only, react-icons) ---- */
+.navbar__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #78350F;
+  font-size: 24px;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.navbar__hamburger svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  display: block;
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS (FIGMA MATCH)
+   ===================================================== */
+
+/* ---- Large tablets / small laptops ---- */
+@media (max-width: 1100px) {
+  .navbar__container {
+    padding: 18px 40px;
+  }
+
+  .navbar__links {
+    gap: 16px;
+  }
+
+  .navbar__links a,
+  .navbar__login {
+    font-size: 15px;
+  }
+
+  .navbar__signup {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
+
+/* ---- Tablets & Mobile: switch to off-canvas dropdown ---- */
+@media (max-width: 860px) {
+  .navbar__container {
+    padding: 16px 24px;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__right {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #FFFBEB;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 24px;
+    border-top: 1px solid rgba(120, 53, 15, 0.1);
+    box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease;
+  }
+
+  .navbar__right--open {
+    max-height: 450px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 24px;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .navbar__links a {
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    padding: 4px 0;
+  }
+
+  .navbar__auth {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navbar__login {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .navbar__signup {
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+/* ---- Small phones ---- */
+@media (max-width: 420px) {
+  .navbar__container {
+    padding: 16px;
+  }
+
+  .navbar__logo img {
+    height: 28px;
+  }
+
+  .navbar__hamburger {
+    font-size: 24px;
+  }
+}
