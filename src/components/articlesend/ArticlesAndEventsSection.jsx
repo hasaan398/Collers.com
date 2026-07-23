@@ -1,5 +1,5 @@
 import React from 'react';
-import './ArticlesAndEventsSection.css';
+import "./articlesandeventssection.css";
 
 import ar0 from '../../assets/ar.png';
 import ar1 from '../../assets/ar1.png';
