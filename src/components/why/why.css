@@ -325,6 +325,14 @@
 
 /* Mobile Screen Modifications (Figma Match) */
 @media (max-width: 768px) {
+  .why-join{
+    background-color: #FFFFFF;
+  }
+  .testimonials{
+    background-color: #FFFFFF;
+  }
+}
+@media (max-width: 768px) {
   .why-join {
     padding: 24px 16px;
   }

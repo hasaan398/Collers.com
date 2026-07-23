@@ -478,11 +478,15 @@ body {
   body, html {
     background-color: #ffffff !important;
   }
+  .hero{
+       background-color: #ffffff !important;
+  }
+  
 }
 /* Extra Small Screens (480px and below) */
 @media (max-width: 480px) {
   .hero__title {
-    font-size: 32px;
+    font-size: 56px;
   }
 
   .hero__subtitle {
@@ -506,11 +510,10 @@ body {
     font-size: 28px;
   }
 }
-
 /* Mobile Screens (480px and below) */
 @media (max-width: 480px) {
   .hero__title {
-    font-size: 28px;
+    font-size: 56px;
   }
 
   .hero__subtitle {
@@ -518,16 +521,23 @@ body {
     margin-bottom: 24px;
   }
 
+  /* 🟢 FIX: Buttons ko 1 line (row) mein align karne ke liye */
   .hero__buttons {
-    flex-direction: column;
+    flex-direction: row;       /* Column se badal kar Row kar dia */
     width: 100%;
     gap: 12px;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero__btn-primary,
   .hero__btn-ghost {
-    width: 100%;
+    width: auto;              /* Full width khatam karke content responsive kar dia */
+    flex: 1;                  /* Dono buttons ko barabar space dene ke liye */
+    padding: 12px 16px;       /* Mobile screen ke liye balanced padding */
     justify-content: center;
+    white-space: nowrap;      /* Text ko doosri line mein tootne se rokne ke liye */
+    font-size: 14px;          /* Mobile friendly text size */
   }
 
   .hero__image-wrapper {
